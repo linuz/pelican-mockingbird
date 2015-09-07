@@ -15,12 +15,12 @@
                     <div class="clear"></div>
                     <div class="info">
                         {% if article.pinned -%}
-                        <a href="{{ SITEURL }}/{{ article.url }}">posted {{ article.date.strftime("%B %d, %I:%M %Y") }}</a>
+                        <a href="{{ SITEURL }}/{{ article.url }}">posted {{ article.date.strftime("%B %d, %H:%M") }}</a>
                         {%- else -%}
-                        <a href="{{ SITEURL }}/{{ article.url }}">posted at {{ article.date.strftime("%I:%M %Y") }}</a>
-                        {%- if article.category.name != "Uncategorized" -%}
+                        <a href="{{ SITEURL }}/{{ article.url }}">posted at {{ article.date.strftime("%H:%M") }}</a>
+                        <!--{%- if article.category.name != "Uncategorized" -%}
                         &nbsp;&middot;&nbsp;<a href="{{ SITEURL }}/{{ article.category.url }}" rel="tag">{{ article.category }}</a>
-                        {%- endif %}
+                        {%- endif %}-->
                         {% if article.tags %}
 
                         <div class="tags">{% for t in article.tags %}

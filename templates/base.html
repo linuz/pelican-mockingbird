@@ -2,6 +2,8 @@
 <li class="ephemeral{%- if selected %} selected{% endif %}"><a href="{{ SITEURL }}/{{ where }}">{{what}}</a></li>
 {%- endmacro -%}
 
+<!--Mockingbird theme by Nevan Scott (http://nevanscott.com/)-->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -17,7 +19,8 @@
 
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/screen.css" type="text/css" />
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css" type="text/css" />
-
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />-->
 
     </head>
     <body>
@@ -31,8 +34,8 @@
                 {% for page in PAGES -%}
                 <li {%- if output_file == page.url %} class="selected"{% endif %}><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
                 {% endfor -%}
-				{% endif -%}
-
+		{% endif -%}
+                <li {%- if output_file == "tags.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}/tags.html">Tags</a></li>
                 <li {%- if output_file == "archives.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}/archives.html">Archives</a></li>
             </ul>
             <div class="header_box">
@@ -53,13 +56,12 @@
                 <div class="clear"></div>
                 <div id="footer">
                     <p>
-                    Mockingbird theme by <a href="http://nevanscott.com/">Nevan Scott</a>
-                    &middot;
                     <a class="atom" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Feed</a>
                 </div>
             </div>
             <div class="clear"></div>
         </div>
+<script src='{{ SITEURL }}/assets/js/auto-target.min.js'></script>
 {% include 'analytics.html' %}
     </body>
 </html>

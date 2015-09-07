@@ -20,7 +20,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	/*font: inherit;*/
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -50,20 +50,21 @@ table {
 /* Mockingbird Theme by Nevan Scott nevanscott.com */
 
 body {
+	background-color: #DADADA;
 	font-family: Georgia, serif;
 	font-size: 16px;
 	line-height: 1.5em;
 	color: #444;
 	}
 #header, #wrapper, #controls ul {
-	width: 750px;
+	width: 50%;
 	margin: 0 0 0 185px;
 	padding: 0 20px;
 	}
 
 a {
 	text-decoration: none;
-	color: #000;
+	color: #32936F;
 	}
 p a {
 	text-decoration: underline;
@@ -78,7 +79,7 @@ ol {
         }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: sans-serif;
+	font-family: Ubuntu, sans-serif;
 	font-weight: bold;
 	}
 h1, h2, h3 {
@@ -96,7 +97,7 @@ blockquote {
 	}
 
 .date {
-	color: #DDD;
+	color: #BD6262;
 	float: left;
 	clear: both;
 	width: 160px;
@@ -131,7 +132,19 @@ blockquote {
 	color: inherit;
 	}
 .info .tags a {
-    background: #CCC;
+    background: #2274A5;
+    color: #FFF;
+    display: inline-block;
+    padding: 0 .3em;
+    border: 1px transparent solid;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+    }
+.taglist a {
+    font-family: sans-serif;
+    background: #2274A5;
     color: #FFF;
     display: inline-block;
     padding: 0 .3em;
@@ -158,7 +171,7 @@ blockquote {
 	}
 
 .page {
-	margin: 0 90px;
+	margin: 0 45px;
 	}
 
 div.codehilite {
@@ -239,7 +252,7 @@ form.inline_edit {
 	background-color: #DDD;
 	}
 #nav li.selected a {
-	background-color: #000;
+	background-color: #011627;
 	color: #FFF;
 	}
 #nav li.ephemeral.selected a {
